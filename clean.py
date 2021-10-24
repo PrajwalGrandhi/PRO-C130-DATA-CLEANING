@@ -16,4 +16,6 @@ del df["luminosity"]
 print(df.shape)
 print(list(df))
 
-df.to_csv("real_final.csv")
+final_data=df.dropna()
+final_data.reset_index(drop=True,inplace=True)
+final_data.to_csv("real_final.csv")
